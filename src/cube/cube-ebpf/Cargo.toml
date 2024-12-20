@@ -1,0 +1,16 @@
+[package]
+name = "cube-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cube-common = { path = "../cube-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "cube"
+path = "src/main.rs"
